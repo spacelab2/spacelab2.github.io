@@ -1,0 +1,32 @@
+{
+  "name": "spacelab2.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "JavaScript.js",
+  "scripts": {
+    "build": "browserify app/js/main.js -o public/js/bundle.js",
+    "watch": "watchify app/js/main.js -o public/js/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spacelab2/spacelab2.github.io.git"
+  },
+  "author": "Sue McMahon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spacelab2/spacelab2.github.io/issues"
+  },
+  "homepage": "https://github.com/spacelab2/spacelab2.github.io#readme",
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^2.3.1",
+    "gulp-uglify": "^1.5.3",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "gsap": "^1.18.4"
+  }
+}
