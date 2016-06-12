@@ -1,22 +1,10 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var gsap = require('gsap');
+var TweenMax = require('gsap');
 
-var circleOne = document.getElementsByClassName('circle-one');
-TweenMax.from(circleOne, 2, {
-    opacity: 0,
-    scale: 0,
-    ease: Bounce.easeOut
-});
+console.log(TweenMax);
 
 
-var lines = document.getElementsByClassName('line');
-TweenMax.staggerFrom(lines, 2, {
-    opacity: 0,
-    y: 200,
-    rotation: 360,
-    scale: 2,
-    delay: 2
-}, 0.2);
+
 },{"gsap":2}],2:[function(require,module,exports){
 (function (global){
 /*!
@@ -7663,6 +7651,8 @@ if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); } //necessary in case Tween
 
 		_tickerActive = false; //ensures that the first official animation forces a ticker.tick() to update the time when it is instantiated
 
-})((typeof(module) !== "undefined" && module.exports && typeof(global) !== "undefined") ? global : this || window, "TweenMax");
+})((typeof (module) !== "undefined" && module.exports && typeof (global) !== "undefined") ? global : this || window, "TweenMax");
+
+module.exports = TweenMax;
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}]},{},[1]);

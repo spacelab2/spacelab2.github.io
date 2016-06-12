@@ -1,5 +1,132 @@
-﻿header,
-main {
-    max-width: 600px;
-    margin: 0 auto;
+﻿.layout-container {
+    width: 100%;
+    position: relative;
+    @media (min-width: 600px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.layout-left {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 600px) { 
+        width: 50vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: pxtorem(10);
+    }
+}
+
+.layout-right {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $body-background;
+    @media (min-width: 600px) {
+        width: 50vw;
+        height: 100%;
+        padding: pxtorem(10);
+    }
+}
+
+.layout-right__text {
+    font-family: $font-body;
+    line-height: 1.6;
+    color: #FFF;
+    font-size: pxtorem(20);
+    text-align: justify;
+    padding: 0 pxtorem(40);
+    @media (min-width: 600px) {
+        max-width: 30vw;
+    }
+}
+
+button {
+    background: transparent;
+    z-index: 201;
+    position: fixed;
+    text-indent: -9999px;
+    top: 16px;
+    right: 16px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.btn--menu__line {
+    width: pxtorem(32);
+    height: pxtorem(5);
+    background: #fff;
+    display: block;
+    margin: 0 0 pxtorem(5) 0;
+    
+}
+
+.layout-overlay {
+    background: #825b56;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: none;
+}
+
+.overlay {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-family: $font-body;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: pxtorem(48);
+    margin: 0;
+    padding: 0;
+    > li {
+        margin: 0 0 pxtorem(40) 0;
+    }
+}
+
+.cross {
+    text-indent: 0;
+    font-size: pxtorem(32);
+    text-indent: 0;
+    font-size: 2rem;
+    top: 10px;
+    right: 21px;
+
+    display: none;
+}
+
+.btn--close {
+    font-size: pxtorem(32);
+    color: #fff;
+    font-family: $font-body;
+    text-transform: uppercase;
+}
+
+.intro {
+    display: none;
 }

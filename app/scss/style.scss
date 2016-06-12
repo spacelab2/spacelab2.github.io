@@ -1,22 +1,31 @@
-﻿@import 'base/reset';
+﻿
+// Reset
+@import 'base/reset';
 
 // Helpers
-
+@import 'helpers/mixins';
 @import 'helpers/variables';
 
 // Layout
-
 @import 'base/layout';
 
-// Modules
-
-@import 'modules/circle-one';
-@import 'modules/line';
+// Components
+@import 'components/logo';
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: "Helvetica Neue","Helvetica", sans-serif;
   font-size: 100%;
-  background-color: $body-background;
+  background-color: $body-background-right;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  @media (min-width: 600px) {
+      flex-direction: row;
+  }
 }
 
 a {
@@ -24,5 +33,10 @@ a {
 }
 
 h1 {
-    color: #fff;
+    color: #85b99c;
+    font-family: $font-heading;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
+
