@@ -5,11 +5,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
     }
 }
 
 .layout-left {
-    height: 50vh;
+    height: 45vh;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -25,7 +26,7 @@
 }
 
 .layout-right {
-    height: 50vh;
+    height: auto;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -34,8 +35,8 @@
     @media (min-width: 600px) {
         width: 50vw;
         height: 100%;
-        margin: pxtorem(10) 0;
-        padding: 0 pxtorem(10);
+        padding: pxtorem(10);
+        
     }
 }
 
@@ -73,15 +74,21 @@ button {
 }
 
 .layout-overlay {
+    width: 100%;
     background: #825b56;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     z-index: 2;
     position: absolute;
     left: 0;
     top: 0;
-
-    display: none;
+    opacity: 0;
+    padding: 0;
+    /*display: none;*/
+    @media (min-width: 600px) {
+        width: 100vw;
+        padding: pxtorem(10);
+    }
 
 }
 
@@ -124,11 +131,89 @@ ul {
 
 .btn--close {
     font-size: pxtorem(32);
-    color: #fff;
+    color: #242424;
     font-family: $font-body;
     text-transform: uppercase;
+    &:hover {
+        color: rgba(255,255,255,0.8);
+   }
 }
 
 .textabout {
     display: none;
 }
+
+
+
+
+.nav-link {
+    font-size: pxtorem(56);
+    > a {
+        color: #242424;
+        text-decoration: none;
+    }
+    &:hover {
+        color: #242424;
+        &:after {
+            transform: translate3d(0,0,0);
+        }
+    }
+    span {
+        display: block;
+        position: relative;
+        &:before {
+            position: absolute;
+	        color: rgba(255,255,255,0.8);
+	        left: 0;
+	        overflow: hidden;
+	        white-space: nowrap;
+	        width: 0%;
+	        transition: width 0.5s;
+            transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+        }
+        &:hover {
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.span-about {
+    &:before {
+        content: attr(data-about);
+    }
+}
+
+.span-article {
+    &:before {
+        content: attr(data-article);
+    }
+}
+
+.span-twitter {
+    &:before {
+        content: attr(data-twitter);
+    }
+}
+
+.about-me {
+    display: none;
+    
+}
+
+.about-me-image {
+    display: block;
+    margin: 0 auto;
+}
+
+.selected {
+   a {
+        span {
+            &:before {
+                color: #242424;
+            }
+        }
+   }
+}
+

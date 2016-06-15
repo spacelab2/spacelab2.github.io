@@ -23,13 +23,15 @@ body {
   width: 100%;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
+  overflow-y: auto;
   @media (min-width: 600px) {
       flex-direction: row;
+      overflow: hidden;
   }
 }
 
 a {
-  color: #00B7FF;
+  color: #fff;
 }
 
 h1 {
