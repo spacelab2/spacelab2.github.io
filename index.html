@@ -1,21 +1,76 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <title>Spacelab</title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link href="public/css/style.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Spacelab</h1>
-    </header>
-    <main>
-        <div class="circle-one"></div>
-        <div class="line line-one"></div>
-        <div class="line line-one"></div>
-        <div class="line line-one"></div>
-    </main>
-    <script src="public/js/min/bundle.js"></script>
+    <div class="layout-container">
+        <div class="layout-overlay">
+            <div class="overlay">
+                <ul class="nav">
+                    <li class="nav-link about">
+                        <a href="#"><span class="span-about" data-about="About">About</span></a>
+                    </li>
+                    <li class="nav-link articles">
+                        <a href="https://medium.com/@Susan_McM"><span class="span-article" data-article="Articles">Article</span></a>
+                    </li>
+                    <li class="nav-link twitter">
+                        <a href="https://twitter.com/Susan_McM"><span class="span-twitter" data-twitter="Twitter">Twitter</span></a>
+                    </li>
+                </ul>
+
+                <div class="layout-right__text about-me">
+                    <h2>About</h2>
+                    
+                    <p class="about-text">
+                        
+                        Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+
+                        Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="layout-left">
+            <div class="logo">
+                <h1 class="logo__heading">Spacelab</h1>
+            </div>
+        </div>
+
+
+
+        <div class="layout-right">
+            
+            <p class="layout-right__text intro">
+                Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+
+                Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+            </p>
+
+            <p class="layout-right__text textabout">
+                Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+
+                Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+          
+            </p>
+        </div>
+
+        <button class="menu">
+            <span class="btn--menu__line"></span>
+            <span class="btn--menu__line"></span>
+            <span class="btn--menu__line"></span>
+        </button>
+        <button class="menu-close">
+            <span class="btn--close">X</span>
+        </button>
+        </div>
+        
+   <script src="public/js/min/bundle.js"></script>
 </body>
 </html>
