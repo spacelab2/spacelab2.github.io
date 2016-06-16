@@ -38,7 +38,7 @@ function sceneOne() {
          .to(layoutLeft, 0.4, { x: '0%', ease: Power1.easeOut })
          .add('layoutRight')
          .to(layoutRight, 0.4, { x: '0%', ease: Power1.easeOut }, 'layoutLeft+=0.30')
-         .to(introText, 1, { y: '0%', opacity: 1 }, 'layoutRight')
+         .to(introText, 1, { y: '0%', opacity: 1, rotationY: 360 }, 'layoutRight')
     } else {
         tlSceneOne
             .set(logo, { scale: 0.5, opacity: 0, rotationX: 45 })
@@ -113,12 +113,13 @@ function sceneSix() {
             .set(aboutMe, { y: "300%" })
             .set(aboutMe, { css: { display: "block" } })
             .set(nav, { css: { display: "none" } })
-            .to(aboutMe, 0.5, { y: "0%" })
+            .to(aboutMe, 0.5, { y: "0%", rotationY: 360 })
     } else {
         tlSceneSix
             .set(aboutMe, { css: { display: "block" } })
             .set(nav, { css: { display: "none" } })
             .set(layoutRight, { css: { display: "none" } })
+            .to(aboutMe, 0.4, {rotationY: 360 })
     }
 }
 
