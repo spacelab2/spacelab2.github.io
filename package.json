@@ -27,7 +27,6 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
-    "fontfaceobserver": "^1.7.1",
     "gsap": "^1.18.4"
   }
 }

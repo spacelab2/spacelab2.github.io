@@ -1,14 +1,5 @@
 ﻿/*jslint browser:true */
 
-var FontFaceObserver = require('fontfaceobserver');
-
-var fontA = new FontFaceObserver('Oswald');
-var fontB = new FontFaceObserver('Roboto');
-
-Promise.all([fontA.load(), fontB.load()]).then(function () {
-    console.log('Family A & B have loaded');
-});
-
 var TweenMax = require("gsap");
 
 var layoutRight = document.querySelector(".layout-right");
