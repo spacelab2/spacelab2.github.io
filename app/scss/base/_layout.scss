@@ -56,12 +56,16 @@ button {
     background: transparent;
     z-index: 201;
     position: fixed;
-    text-indent: -9999px;
-    top: 16px;
-    right: 16px;
+    top: 0;
+    right: 0;
     border: 0;
     outline: 0;
     cursor: pointer;
+    padding: 20px;
+    width:36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #fff;
 }
 
 .btn--menu__line {
@@ -118,14 +122,11 @@ ul {
     }
 }
 
-.menu-close {
+/*.menu-close {
     text-indent: 0;
     font-size: pxtorem(32);
     text-indent: 0;
     font-size: 2rem;
-    top: 10px;
-    right: 21px;
-
     display: none;
 }
 
@@ -137,6 +138,16 @@ ul {
     &:hover {
         color: rgba(255,255,255,0.8);
    }
+}*/
+
+/*.menu,
+.menu-close {
+    display: none;
+}*/
+    
+
+.menu-close {
+    display: none;
 }
 
 .textabout {
@@ -216,4 +227,105 @@ ul {
         }
    }
 }
+
+.btn--round {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    transform: translate3d(0,0,0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.26);
+    transition: box-shadow 200ms cubic-bezier(0.25,0.46,0.45,0.94);
+    &:hover {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.36);
+    }
+ }
+
+.btn--menu {
+    transition: transform 0.42s cubic-bezier(0.15,0.51,0.29,1);
+}
+
+.menuBtn {
+    z-index: 201;
+    position: fixed;
+    text-indent: -9999px;
+    top: 16px;
+    right: 16px;
+}
+
+.btn--menu__line {
+    width: 2rem;
+    height: .3125rem;
+    background: #fff;
+    display: block;
+    margin: 0 0 .3125rem;
+}
+
+.btn--menu .btn--menu__line {
+    top: 48%;
+    left: 50%;
+    height: 2px;
+    width: 22px;
+    display: block;
+    position: absolute;
+    background-color: #000;
+    transition-duration: 0.42s;
+    transition-property: -webkit-transform,opacity;
+    transition-property: transform,opacity;
+    transition-timing-function: cubic-bezier(0.15,0.51,0.29,1);
+}
+
+.btn--menu[data-state="open"] .btn--menu__line[data-line="top"] {
+    transform: translate3d(-11px,-6px,0);
+    &:hover {
+        transform: translate3d(-11px,-6px,0) scaleX(1.12);
+    }
+}
+
+.btn--menu[data-state="open"] .btn--menu__line[data-line="middle"] {
+    transform: translate3d(-11px,0,0);
+    &:hover {
+        transform: translate3d(-11px,0,0) scaleX(1.12);
+    }
+}
+
+.btn--menu[data-state="open"] .btn--menu__line[data-line="bottom"] {
+    transform: translate3d(-11px,6px,0);
+    &:hover {
+        transform: translate3d(-11px,6px,0) scaleX(1.12);
+    }
+}
+
+.menu__close {
+    z-index: 203;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    box-shadow: none;
+}
+
+.btn--close .btn--close__line {
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 25px;
+    margin-top: -11px;
+    margin-left: -1px;
+    position: absolute;
+    background-color: #000;
+}
+
+.btn--close .btn--close__line[data-line="1"] {
+    transform: rotateZ(45deg);
+}
+
+.btn--close .btn--close__line[data-line="2"] {
+    transform: rotateZ(-45deg);
+}
+
+
+
 

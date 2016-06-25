@@ -52,6 +52,7 @@ function sceneOne() {
 
 function sceneTwo() {
     "use strict";
+    console.log('open');
     if (window.matchMedia("(min-width: 600px)").matches) {
         tlSceneTwo
             .set(overlay, { y: '300%' })
@@ -59,6 +60,7 @@ function sceneTwo() {
             .set(close, { css: { display: 'block' } })
             .set(aboutMe, { css: { display: "none" } })
             .set(nav, { css: { display: 'flex' } })
+            .to(close, 1, { rotation: 180 })
             .to(overlay, 1, { y: '0%', opacity: 1 })
             .to(layoutRight, 1, { opacity: 0 })
     } else {
@@ -68,17 +70,20 @@ function sceneTwo() {
             .set(aboutMe, { css: { display: "none" } })
             .set(layoutRight, { css: { display: "none" } })
             .set(nav, { css: { display: 'flex' } })
+            .to(close, 1, { rotation: 180 })
             .to(overlay, 1, { opacity: 1 })
     }
 }
 
 function sceneThree() {
     "use strict";
+    console.log('close');
     if (window.matchMedia("(min-width: 600px)").matches) {
         tlSceneThree
             .set(menu, { css: { display: 'block' } })
             .set(close, { css: { display: 'none' } })
             .add('overlay')
+            .fromTo(menu, 1, {rotation: 0}, { rotation: 180 })
             .to(overlay, 5, { y: '300%' })
             .to(layoutRight, 0.4, { opacity: 1 }, 'overlay')
             .to(layoutLeft, 0.4, { opacity: 1 }, 'overlay')
@@ -88,6 +93,7 @@ function sceneThree() {
             .set(close, { css: { display: 'none' } })
             .set(layoutRight, { css: { display: 'flex' } })
             .to(overlay, 1, { opacity: 0 })
+            .to(menu, 1, { rotation: 180 })
     }
 }
 
