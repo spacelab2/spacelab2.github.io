@@ -1,83 +1,89 @@
 ﻿/*jslint node, maxlen: 120 */
 "use strict";
 
-var browserify = require('browserify');
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var uglify = require('gulp-uglify');
-var gutil = require('gulp-util');
-var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
-var sourcemaps = require('gulp-sourcemaps');
+var browserify = require("browserify");
+var gulp = require("gulp");
+var sass = require("gulp-sass");
+var autoprefixer = require("gulp-autoprefixer");
+var uglify = require("gulp-uglify");
+var gutil = require("gulp-util");
+var source = require("vinyl-source-stream");
+var buffer = require("vinyl-buffer");
+var sourcemaps = require("gulp-sourcemaps");
 
-var sassSrc = 'app/scss/**/*.scss';
-var sassDest = 'public/css';
-var jsEntries = './app/js/main.js';
-var jsSrc = 'bundle.js';
-var jsDest = 'public/js';
+var sassSrc = "app/scss/**/*.scss";
+var sassDest = "public/css";
+var jsEntries = "./app/js/main.js";
+var jsSrc = "bundle.js";
+var jsDest = "public/js";
 
 var sassOptions = {
     errLogToConsole: true,
-    outputStyle: 'expanded'
+    outputStyle: "expanded"
 };
 
-gulp.task('sass', function () {
+// Sass with sourcemaps for development.
+gulp.task("sass", function () {
     return gulp
-      .src(sassSrc)
-      .pipe(sourcemaps.init())
-      .pipe(sass(sassOptions).on('error', sass.logError))
-      .pipe(sourcemaps.write())
-      .pipe(gulp.dest(sassDest));
+        .src(sassSrc)
+        .pipe(sourcemaps.init())
+        .pipe(sass(sassOptions).on("error", sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(sassDest));
 });
 
-gulp.task('javascript', function () {
+// JavaScript with sourcemaps for development.
+gulp.task("javascript", function () {
     var b = browserify({
         entries: jsEntries,
         debug: true
     });
 
     return b.bundle()
-      .pipe(source(jsSrc))
-      .pipe(buffer())
-      .pipe(sourcemaps.init({ loadMaps: true }))
-          .on('error', gutil.log)
-      .pipe(sourcemaps.write())
-      .pipe(gulp.dest(jsDest));
+        .pipe(source(jsSrc))
+        .pipe(buffer())
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .on("error", gutil.log)
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(jsDest));
 });
 
-gulp.task('minify-javascript', function () {
+
+// Minify JavaScript for production
+gulp.task("minify-javascript", function () {
   // set up the browserify instance on a task basis
-  var b = browserify({
-      entries: jsEntries,
-    debug: true
-  });
+    var b = browserify({
+        entries: jsEntries,
+        debug: true
+    });
 
-  return b.bundle()
-    .pipe(source(jsSrc))
-    .pipe(buffer())
-    .pipe(uglify())
-    .on('error', gutil.log)
-    .pipe(gulp.dest(jsDest));
+    return b.bundle()
+        .pipe(source(jsSrc))
+        .pipe(buffer())
+        .pipe(uglify())
+        .on("error", gutil.log)
+        .pipe(gulp.dest(jsDest));
 });
 
-gulp.task('minify-css', function () {
+// Minify sass for production
+gulp.task("minify-css", function () {
     return gulp
-      .src(sassSrc)
-      .pipe(sass({ outputStyle: 'compressed' }))
-      .pipe(autoprefixer({
-          browsers: ['last 2 versions'],
-          cascade: false
-      }))
-      .pipe(gulp.dest(sassDest));
+        .src(sassSrc)
+        .pipe(sass({outputStyle: "compressed"}))
+        .pipe(autoprefixer({
+            browsers: ["last 2 versions"],
+            cascade: false
+        }))
+        .pipe(gulp.dest(sassDest));
 });
 
-gulp.task('production', ['minify-css', 'minify-javascript']);
+// 'Production' task, this will minify css and javascript for production
+gulp.task("production", ["minify-css", "minify-javascript"]);
 
 
-
-gulp.task('watch', ['sass', 'javascript'], function () {
-    gulp.watch('./app/scss/**/*.scss', ['sass']);
-    gulp.watch('./app/js/main.js', ['javascript']);
+// Watch task for Sass and JavaScript (Unminified with sourcemaps)
+gulp.task("watch", ["sass", "javascript"], function () {
+    gulp.watch("./app/scss/**/*.scss", ["sass"]);
+    gulp.watch("./app/js/main.js", ["javascript"]);
 });
 
