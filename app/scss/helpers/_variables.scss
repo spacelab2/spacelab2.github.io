@@ -1,4 +1,31 @@
-﻿$body-background: #825b56;
-$font-heading: 'Oswald', sans-serif;
-$font-body: 'Roboto', sans-serif;
-$body-background-right: #052439;
+﻿/*------------------------------------*\
+    Variables
+\*------------------------------------*/
+
+/*------------------------------------*\
+    Colours
+\*------------------------------------*/
+
+// Colours
+$dark-blue: #052439;
+$dark-pink: #825b56;
+
+// Modules 
+$main-background: $dark-blue;
+$main__right-background: $dark-pink;
+
+/*------------------------------------*\
+    Typography
+\*------------------------------------*/
+
+// Web fonts
+$font-oswald: 'Oswald', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+
+// Default
+$default--font: $font-roboto;
+
+// Modules
+$logo__heading-font: $font-oswald;
+
+
