@@ -135,4 +135,4 @@ close.addEventListener("click", sceneThree, false);
 layoutRight.addEventListener("mouseover", sceneFour, false);
 layoutRight.addEventListener("mouseout", sceneFive, false);
 about.addEventListener("click", sceneSix, false);
-
+console.log('boo');
