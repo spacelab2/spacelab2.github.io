@@ -1,6 +1,5 @@
-﻿// Convert pixels to Rems
-$base-font-size: 16;
+﻿$browser-context: 16; // Default
 
-@function pxtorem($px, $base: $base-font-size) {
-    @return #{$px / $base}rem;
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
 }

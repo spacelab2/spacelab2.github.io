@@ -9,10 +9,13 @@
 // Colours
 $dark-blue: #052439;
 $dark-pink: #825b56;
+$teal: #85b99c;
+$white: #fff;
+$black: #000;
 
 // Modules 
-$main-background: $dark-blue;
 $main__right-background: $dark-pink;
+$logo__colour: $teal;
 
 /*------------------------------------*\
     Typography
@@ -22,10 +25,38 @@ $main__right-background: $dark-pink;
 $font-oswald: 'Oswald', sans-serif;
 $font-roboto: 'Roboto', sans-serif;
 
-// Default
-$default--font: $font-roboto;
+/*------------------------------------*\
+    Default settings
+\*------------------------------------*/
 
-// Modules
+$base--font: $font-roboto;
+$base-font-size: 100%;
+$base-background: $dark-blue;
+
+/*------------------------------------*\
+    Modules settings
+\*------------------------------------*/
+
+// Logo
 $logo__heading-font: $font-oswald;
+$logo__heading-font-size: 38;
+$logo--large: 48;
+$logo__heading-text-transform: uppercase;
+
+// Content
+$content--line-height: 1.6;
+$content--colour: $white;
+$content--font-size: 20;
+$content--align: justify;
+$content--padding: 40;
+
+// Menu
+$menu--padding: 20;
+$menu--background-colour: $dark-pink;
+$menu--size: 32;
+$menu--line-colour: $dark-blue;
+$menu--line-close-colour: $dark-pink;
+$menu--line-close-background-colour: $dark-blue;
+
 
 

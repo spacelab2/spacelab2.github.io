@@ -7,7 +7,17 @@
 \*------------------------------------*/
 
 .menu {
-    display: none;
+    position: fixed;
+    top: rem(10);
+    right: rem(10);
+    width: rem($menu--size);
+    height: rem($menu--size);
+    padding: rem($menu--padding);
+    border-radius: 50%;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background-color: $menu--background-colour;
 }
 
 /*------------------------------------*\
@@ -15,7 +25,26 @@
 \*------------------------------------*/
 
 .menu__line {
-
+    top: 48%;
+    left: 50%;
+    height: 2px;
+    width: 22px;
+    display: block;
+    position: absolute;
+    background-color: $menu--line-colour;
+    transition-duration: 0.42s;
+    transition-property: -webkit-transform,opacity;
+    transition-property: transform,opacity;
+    transition-timing-function: cubic-bezier(0.15,0.51,0.29,1);
+    &[data-line="top"] {
+        transform: translate3d(-11px,-6px,0);
+    }
+    &[data-line="middle"] {
+        transform: translate3d(-11px,0,0);
+    }
+    &[data-line="bottom"] {
+        transform: translate3d(-11px,6px,0);
+    }
 }
 
 /*------------------------------------*\
@@ -24,8 +53,25 @@
 
 .menu--close {
     display: none;
+    background: $menu--line-close-background-colour;
 }
 
 .menu--line-close {
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 25px;
+    margin-top: -12px;
+    margin-left: -1px;
+    position: absolute;
+    background-color: $menu--line-close-colour;
+}
 
+.menu--line-close {
+    &[data-line="1"] {
+        transform: rotateZ(45deg);
+    }
+    &[data-line="2"] {
+        transform: rotateZ(-45deg);
+    }
 }

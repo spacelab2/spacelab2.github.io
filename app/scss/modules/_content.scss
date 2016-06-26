@@ -7,7 +7,10 @@
 \*------------------------------------*/
 
 .content {
-    display: none;
+    padding: 0 rem($content--padding);
+    font-size: rem($content--font-size);
+    line-height: $content--line-height;
+    text-align: $content--align;
 }
 
 /*------------------------------------*\

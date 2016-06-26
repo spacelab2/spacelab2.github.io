@@ -7,7 +7,9 @@
 \*------------------------------------*/
 
 .main {
-
+    width: 100%;
+    height: 100vh;
+    position: relative;
 }
 
 
@@ -15,16 +17,15 @@
     Elements
 \*------------------------------------*/
 
-.main__left {
-
-}
-
-.main__left {
-
+.main__half {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main__overlay {
-
+    display: none;
 }
 
 .main__wrapper {
@@ -34,3 +35,14 @@
 /*------------------------------------*\
     Modifiers
 \*------------------------------------*/
+
+.main--left {
+    height: 40vh;
+}
+
+.main--right {
+    display: block;
+    overflow-y: auto;
+    height: 60vh;
+    background: $main__right-background;
+}
