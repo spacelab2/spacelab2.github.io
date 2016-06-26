@@ -10,6 +10,12 @@
     width: 100%;
     height: 100vh;
     position: relative;
+    @media (min-width: rem(600)) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
 }
 
 
@@ -22,6 +28,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (min-width: rem(600)) { 
+        width: 50vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: pxtorem(10);
+    }
 }
 
 .main__overlay {
@@ -29,7 +43,12 @@
 }
 
 .main__wrapper {
-
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
 }
 
 /*------------------------------------*\
@@ -38,11 +57,24 @@
 
 .main--left {
     height: 40vh;
+    @media (min-width: rem(600)) {
+        height: 100%;
+    }
 }
 
 .main--right {
-    display: block;
-    overflow-y: auto;
+    overflow-y: scroll; 
+    -webkit-overflow-scrolling: touch;
     height: 60vh;
-    background: $main__right-background;
+    background: $main--right-background;
+    display: block;
+    @media (min-width: rem(400)) {
+        display: flex;
+        flex-direction: column;
+        height: 60vh;
+        overflow: auto;
+    }
+    @media (min-width: rem(600)) {
+        height: 100%;
+    } 
 }

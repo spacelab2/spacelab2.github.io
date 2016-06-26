@@ -7,6 +7,14 @@
 \*------------------------------------*/
 
 .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    list-style: none;
     display: none;
 }
 
@@ -14,8 +22,41 @@
     Elements
 \*------------------------------------*/
 
-.nav__link {
+.nav__list {
+    margin: 0 0 rem($nav--link-margin) 0;
+}
 
+.nav__link {
+    font-size: rem($nav--font-size);
+    text-transform: $nav--text-transform;
+    text-decoration: none;
+    color: $nav--colour;
+    &:hover {
+        color: $nav--colour;
+        &:after {
+            transform: translate3d(0,0,0);
+        }
+    }
+}
+
+.nav__span {
+    display: block;
+    position: relative;
+    &:before {
+        position: absolute;
+	    color: lighten($nav--colour, 40%);
+	    left: 0;
+	    overflow: hidden;
+	    white-space: nowrap;
+	    width: 0%;
+	    transition: width 0.5s;
+        transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    }
+    &:hover {
+        &:before {
+            width: 100%;
+        }
+    }
 }
 
 /*------------------------------------*\
@@ -35,14 +76,20 @@
 }
 
 .nav--span-about {
-
+    &:before {
+        content: attr(data-about);
+    }
 }
 
 .nav--span-article {
-
+    &:before {
+        content: attr(data-article);
+    }
 }
 
 .nav--span-twitter {
-
+    &:before {
+        content: attr(data-twitter);
+    }
 }
 

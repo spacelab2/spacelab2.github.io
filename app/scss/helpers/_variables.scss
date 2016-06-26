@@ -13,10 +13,6 @@ $teal: #85b99c;
 $white: #fff;
 $black: #000;
 
-// Modules 
-$main__right-background: $dark-pink;
-$logo__colour: $teal;
-
 /*------------------------------------*\
     Typography
 \*------------------------------------*/
@@ -37,26 +33,33 @@ $base-background: $dark-blue;
     Modules settings
 \*------------------------------------*/
 
+// Main
+$main--right-background: $dark-pink;
+
 // Logo
-$logo__heading-font: $font-oswald;
-$logo__heading-font-size: 38;
+$logo--heading-font: $font-oswald;
+$logo--heading-font-size: 38;
 $logo--large: 48;
-$logo__heading-text-transform: uppercase;
+$logo--colour: $teal;
 
 // Content
 $content--line-height: 1.6;
 $content--colour: $white;
 $content--font-size: 20;
-$content--align: justify;
-$content--padding: 40;
+$content--padding: 10;
+$content--padding-large: 40;
 
 // Menu
 $menu--padding: 20;
-$menu--background-colour: $dark-pink;
+$menu--background-colour: $white;
 $menu--size: 32;
 $menu--line-colour: $dark-blue;
-$menu--line-close-colour: $dark-pink;
-$menu--line-close-background-colour: $dark-blue;
+$menu--line-close-colour: $dark-blue;
+$menu--line-close-background-colour: $dark-pink;
 
-
+// nav
+$nav--link-margin: 40;
+$nav--font-size: 56;
+$nav--text-transform: uppercase;
+$nav--colour: $teal;
 

@@ -10,23 +10,32 @@
     padding: 0 rem($content--padding);
     font-size: rem($content--font-size);
     line-height: $content--line-height;
-    text-align: $content--align;
+    text-align: center;
+    @media (min-width: rem(600)) { 
+        padding: 0 rem($content--padding-large);
+        text-align: justify;
+    }
 }
 
 /*------------------------------------*\
     Elements
 \*------------------------------------*/
 
+.content__heading {
+    text-align: center;
+}
+
 /*------------------------------------*\
     Modifiers
 \*------------------------------------*/
 
 .content--is-about {
-
+    display: block;
 }
 
 .content--is-intro {
-
+    display: none;
 }
+
 
 
