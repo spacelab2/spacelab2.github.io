@@ -10,14 +10,14 @@
     <link href="public/css/style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="main">
+    <div class="main js-main-overlay">
 
-        <div class="main__overlay">
+        <div class="main__overlay js-display-overlay">
             <div class="main__wrapper">
-                <ul class="nav">
+                <ul class="nav js-nav">
                     <li class="nav__list nav--is-about">
                         <a class="nav__link" href="#">
-                            <span class="nav__span nav--span-about" data-about="About">About</span>
+                            <span class="nav__span nav--span-about js-about" data-about="About">About</span>
                         </a>
                     </li>
                     <li class="nav__list nav--is-articles">
@@ -32,33 +32,34 @@
                     </li>
                 </ul>
 
+                <div class="content content--about js-about-content">
+                    <h2 class="content__heading content--is-about">About</h2>
+                    <p class="content_text content--is-about">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+                </div>
+
             </div>
         </div>
 
-        <div class="main__half main--left">
+        <div class="main__half main--left js-main-left">
             <div class="logo">
                 <h1 class="logo__heading">Spacelab</h1>
             </div>
         </div>
 
-        <div class="main__half main--right">
-            <p class="content content--is-intro">
+        <div class="main__half main--right js-main-right">
+            <p class="content_text content--is-intro js-intro">
                 Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
                 Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
             </p> 
-                
-            <h2 class="content__heading">About</h2>
-            <p class="content content--is-about">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
-            
         </div>
 
-        <button class="menu">
+        <button class="menu js-menu-open">
             <span class="menu__line" data-line="top"></span>
             <span class="menu__line" data-line="middle"></span>
             <span class="menu__line" data-line="bottom"></span>
         </button>
 
-        <button class="menu menu--close">
+        <button class="menu menu--close js-menu-close">
             <span class="menu__line menu--line-close" data-line="1"></span>
             <span class="menu__line menu--line-close" data-line="2"></span>
         </button>
@@ -66,6 +67,6 @@
 
     </div>
    
-   <!--<script src="public/js/bundle.js"></script>-->
+   <script src="public/js/bundle.js"></script>
 </body>
 </html>

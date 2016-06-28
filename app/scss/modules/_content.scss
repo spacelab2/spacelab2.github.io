@@ -6,14 +6,15 @@
     Block
 \*------------------------------------*/
 
-.content {
-    padding: 0 rem($content--padding);
-    font-size: rem($content--font-size);
-    line-height: $content--line-height;
-    text-align: center;
+.content--about {
+    color: $content--about-colour;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
     @media (min-width: rem(600)) { 
-        padding: 0 rem($content--padding-large);
-        text-align: justify;
+        flex-direction: row;
+        align-items: center;
     }
 }
 
@@ -23,6 +24,22 @@
 
 .content__heading {
     text-align: center;
+    font-size: rem($content--heading-size);
+    @media (min-width: rem(600)) {
+        font-size: rem($content--heading-size-large);
+    }
+}
+
+.content_text {
+    padding: 0 rem($content--padding);
+    font-size: rem($content--font-size);
+    line-height: $content--line-height;
+    text-align: center;
+    @media (min-width: rem(600)) { 
+        padding: 0 rem($content--padding-large);
+        text-align: justify;
+        font-size: rem($content--font-size-large);
+    }
 }
 
 /*------------------------------------*\
@@ -30,11 +47,18 @@
 \*------------------------------------*/
 
 .content--is-about {
-    display: block;
+    width: auto;
+    @media (min-width: rem(600)) { 
+        width: 50vh;
+    }
+    @media (min-width: rem(2000)) {
+        width: 50%;
+    }
 }
 
 .content--is-intro {
-    display: none;
+    display: block;
+    width: 50vh;
 }
 
 
