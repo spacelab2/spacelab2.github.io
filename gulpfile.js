@@ -17,6 +17,7 @@ var jsEntries = "./app/js/main.js";
 var jsSrc = "bundle.js";
 var jsDest = "public/js";
 
+
 var sassOptions = {
     errLogToConsole: true,
     outputStyle: "expanded"

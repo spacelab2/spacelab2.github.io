@@ -1,0 +1,15 @@
+﻿/*------------------------------------*\
+    JS Modifiers toggleAbout
+\*------------------------------------*/
+
+.is--toggle-about {
+
+    .content--about {
+        display: flex;
+    }
+
+    .nav {
+        display: none;
+    }
+    
+}

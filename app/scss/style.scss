@@ -13,6 +13,11 @@
 @import 'modules/menu';
 @import 'modules/logo';
 
+// Dynamic modules
+
+@import 'modules/dynamic/toggleNav';
+@import 'modules/dynamic/toggleAbout';
+
 :root {
     font-size: $base-font-size;
     @media (min-width: rem(2000)) {  

@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "JavaScript.js",
-  "scripts": {},
+  "scripts": {
+    "build": "browserify app/js/main.js -o public/js/bundle.js",
+    "watch": "watchify app/js/main.js -o public/js/bundle.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/spacelab2/spacelab2.github.io.git"

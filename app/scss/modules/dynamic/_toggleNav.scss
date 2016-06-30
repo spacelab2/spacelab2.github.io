@@ -1,0 +1,31 @@
+﻿/*------------------------------------*\
+    JS Modifiers toggleNav
+\*------------------------------------*/
+
+.is--toggle-nav {
+
+    .main__overlay {
+        display: block;
+    }
+
+    .main__half {
+        display: none;
+    }
+
+    .menu--open {
+        display: none;
+    }
+
+    .menu--close {
+        display: block;
+    }
+
+    .content--about {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+    }
+
+}
