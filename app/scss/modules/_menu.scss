@@ -52,7 +52,7 @@
 \*------------------------------------*/
 
 .menu--close {
-    display: none;
+    opacity: 0;
     background: $menu--line-close-background-colour;
 }
 
@@ -70,8 +70,11 @@
 .menu--line-close {
     &[data-line="1"] {
         transform: rotateZ(45deg);
+        
     }
     &[data-line="2"] {
         transform: rotateZ(-45deg);
     }
 }
+
+

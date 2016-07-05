@@ -13,11 +13,11 @@
     }
 
     .menu--open {
-        display: none;
+        opacity: 0;
     }
 
     .menu--close {
-        display: block;
+        opacity: 1;
     }
 
     .content--about {
@@ -29,3 +29,5 @@
     }
 
 }
+
+

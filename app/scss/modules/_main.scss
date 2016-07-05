@@ -61,23 +61,27 @@
     height: 40vh;
     @media (min-width: rem(600)) {
         height: 100%;
-    }
+        width: 50vw;
+        animation-name: example2;
+        animation-duration: 3s;
+   }
 }
 
 .main--right {
     overflow-y: scroll; 
     -webkit-overflow-scrolling: touch;
-    height: 60vh;
+    height: auto;
     background: $main--right-background;
-    display: block;
+    display: flex;
     @media (min-width: rem(600)) {
-        display: flex;
         /*flex-direction: column;*/
         height: 60vh;
-        overflow: auto;
+        overflow: hidden;
     }
     @media (min-width: rem(600)) {
         height: 100%;
     } 
 }
+
+
 

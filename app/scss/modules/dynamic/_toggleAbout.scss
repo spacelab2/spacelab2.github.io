@@ -5,7 +5,10 @@
 .is--toggle-about {
 
     .content--about {
-        display: flex;
+        display: block;
+        @media (min-width: rem(800))  {
+            display: flex;
+        }
     }
 
     .nav {

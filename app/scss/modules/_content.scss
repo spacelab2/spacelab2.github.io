@@ -49,16 +49,19 @@
 .content--is-about {
     width: auto;
     @media (min-width: rem(600)) { 
-        width: 50vh;
+        width: 40vh;
     }
     @media (min-width: rem(2000)) {
-        width: 50%;
+        width: 40vh;
     }
 }
 
 .content--is-intro {
+    width: 100%;
     display: block;
-    width: 50vh;
+    @media (min-width: rem(600)) {
+        width: 50vh;
+    }
 }
 
 

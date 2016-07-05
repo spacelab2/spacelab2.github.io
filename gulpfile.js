@@ -1,20 +1,17 @@
 ﻿/*jslint node, maxlen: 120 */
 "use strict";
 
-var browserify = require("browserify");
 var gulp = require("gulp");
 var sass = require("gulp-sass");
 var autoprefixer = require("gulp-autoprefixer");
 var uglify = require("gulp-uglify");
 var gutil = require("gulp-util");
-var source = require("vinyl-source-stream");
-var buffer = require("vinyl-buffer");
 var sourcemaps = require("gulp-sourcemaps");
+var critical = require('critical');
 
 var sassSrc = "app/scss/**/*.scss";
 var sassDest = "public/css";
 var jsEntries = "./app/js/main.js";
-var jsSrc = "bundle.js";
 var jsDest = "public/js";
 
 
@@ -35,14 +32,8 @@ gulp.task("sass", function () {
 
 // JavaScript with sourcemaps for development.
 gulp.task("javascript", function () {
-    var b = browserify({
-        entries: jsEntries,
-        debug: true
-    });
-
-    return b.bundle()
-        .pipe(source(jsSrc))
-        .pipe(buffer())
+    return gulp
+        .src(jsEntries)
         .pipe(sourcemaps.init({loadMaps: true}))
         .on("error", gutil.log)
         .pipe(sourcemaps.write())
@@ -53,14 +44,8 @@ gulp.task("javascript", function () {
 // Minify JavaScript for production
 gulp.task("minify-javascript", function () {
   // set up the browserify instance on a task basis
-    var b = browserify({
-        entries: jsEntries,
-        debug: true
-    });
-
-    return b.bundle()
-        .pipe(source(jsSrc))
-        .pipe(buffer())
+    return gulp
+        .src(jsEntries)
         .pipe(uglify())
         .on("error", gutil.log)
         .pipe(gulp.dest(jsDest));
@@ -87,4 +72,3 @@ gulp.task("watch", ["sass", "javascript"], function () {
     gulp.watch("./app/scss/**/*.scss", ["sass"]);
     gulp.watch("./app/js/main.js", ["javascript"]);
 });
-
