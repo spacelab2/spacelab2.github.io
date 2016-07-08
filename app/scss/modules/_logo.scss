@@ -23,7 +23,7 @@
     text-transform: uppercase;
     color: $logo--colour;
     transform: scale(0.5);
-    animation: scale 2s forwards linear 1;
+    animation: 2s ease-in forwards scale; 
     @media (min-width: rem(600)) {
         font-size: rem($logo--large);
         

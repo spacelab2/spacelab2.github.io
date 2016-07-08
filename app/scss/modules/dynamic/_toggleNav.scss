@@ -7,8 +7,10 @@
     .main__overlay {
         display: block;
         transform: translateY(100%);
-        animation: slideVertical 2s forwards;
-   
+        animation: 2s forwards slideVertical;
+         @media (min-width: rem(2000)) { 
+             width: 100%;
+         }
     }
 
     .main__half {

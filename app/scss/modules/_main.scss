@@ -66,7 +66,7 @@
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    animation: heightExpand 2s 1s forwards 1;
+    animation: 2s 1s 1 forwards heightExpand;
     @media (min-width: rem(600)) {
         height: 100%;
         width: 50vw;
@@ -79,14 +79,14 @@
     background: $main--right-background;
     display: flex;
     transform: translatey(100%);
-    animation: slideVertical 2s 1s forwards 1;
+    animation: 2s 1s 1 forwards slideVertical;
     @media (min-width: rem(600)) {
         height: 60vh;
         overflow: hidden;
         transform: translatex(100%);
         width: 0;
         height: 100%;
-        animation: slideHorizontal 2s 2s forwards 1;
+        animation: 2s 2s 1 forwards slideHorizontal;
     }
 }
 

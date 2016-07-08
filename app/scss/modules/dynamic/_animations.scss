@@ -32,12 +32,6 @@
     }
  }
 
-
-
-
-
-// Remove animations
-
 .loaded {
     .logo__heading {
         animation: none;
@@ -47,25 +41,20 @@
     .main--right {
         transform: translateY(0);
         opacity: 0;
-        
-        animation: opacity 3s 0.5s forwards;
+        animation: 3s 0.5s forwards opacity;
         @media (min-width: rem(600)) {
             transform: translateX(0);
             width: 50vw;
         }
     }
-
+ 
     .main--left {
-        height: 50vh;
-      
-        animation: opacity 3s forwards;
-        height: 0;
-           animation: height 3s forwards;
+         height: 0;
+        animation: height 3s forwards;
         @media (min-width: rem(600)) {
-            opacity: 1;
+           opacity: 1;
            height: 0;
-           animation: height 3s forwards;
+           animation: 3s forwards height;
         }
     }
-
 }
