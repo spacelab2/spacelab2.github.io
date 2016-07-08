@@ -22,11 +22,10 @@
     font-family: $logo--heading-font;
     text-transform: uppercase;
     color: $logo--colour;
+    transform: scale(0.5);
+    animation: scale 2s forwards linear 1;
     @media (min-width: rem(600)) {
         font-size: rem($logo--large);
+        
     }
 }
-
-/*------------------------------------*\
-    Modifiers
-\*------------------------------------*/
