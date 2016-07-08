@@ -6,6 +6,8 @@
 
     .content--about {
         display: block;
+        transform: translatex(-100%);
+        animation:  slideOffset 2s forwards;
         @media (min-width: rem(800))  {
             display: flex;
         }
@@ -16,3 +18,6 @@
     }
     
 }
+
+
+

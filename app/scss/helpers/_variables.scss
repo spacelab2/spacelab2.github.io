@@ -26,8 +26,10 @@ $font-roboto: 'Roboto', sans-serif;
 \*------------------------------------*/
 
 $base--font: $font-roboto;
-$base-font-size: 100%;
-$base-background: $dark-blue;
+$base--font-size: 100%;
+$base--font-size-huge: 1.2vw;
+$base--background: $dark-pink;
+$base--background-large: $dark-blue;
 
 /*------------------------------------*\
     Modules settings

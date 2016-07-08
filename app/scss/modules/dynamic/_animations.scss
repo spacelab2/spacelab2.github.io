@@ -1,0 +1,71 @@
+﻿@keyframes slideHorizontal {
+  100%   { transform: translatex(0); width: 50vw; }
+}
+
+@keyframes slideVertical {
+  100%   { transform: translatey(0); }
+}
+
+@keyframes heightExpand {
+    100% {height: 50vh;}
+}
+
+@keyframes scale {
+    100% {transform: scale(1);}
+}
+
+@keyframes slideOffset {
+    100% { transform: translateX(0); }
+}
+
+@keyframes opacity {
+    100% { opacity: 1; }
+}
+
+@keyframes height {
+    100% {height: 50vh;}
+}
+
+ @media (min-width: rem(600)) {
+     @keyframes height {
+        100% {height: 60vh;}
+    }
+ }
+
+
+
+
+
+// Remove animations
+
+.loaded {
+    .logo__heading {
+        animation: none;
+        transform: scale(1);
+    }
+
+    .main--right {
+        transform: translateY(0);
+        opacity: 0;
+        
+        animation: opacity 3s 0.5s forwards;
+        @media (min-width: rem(600)) {
+            transform: translateX(0);
+            width: 50vw;
+        }
+    }
+
+    .main--left {
+        height: 50vh;
+      
+        animation: opacity 3s forwards;
+        height: 0;
+           animation: height 3s forwards;
+        @media (min-width: rem(600)) {
+            opacity: 1;
+           height: 0;
+           animation: height 3s forwards;
+        }
+    }
+
+}

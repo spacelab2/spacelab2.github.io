@@ -32,10 +32,7 @@
     display: block;
     position: absolute;
     background-color: $menu--line-colour;
-    transition-duration: 0.42s;
-    transition-property: -webkit-transform,opacity;
-    transition-property: transform,opacity;
-    transition-timing-function: cubic-bezier(0.15,0.51,0.29,1);
+    transition: 0.42s transform cubic-bezier(0.15,0.51,0.29,1);
     &[data-line="top"] {
         transform: translate3d(-11px,-6px,0);
     }
@@ -69,12 +66,13 @@
 
 .menu--line-close {
     &[data-line="1"] {
-        transform: rotateZ(45deg);
-        
+        transform: rotateZ(180deg) translate3d(10px, 0, 0);
     }
     &[data-line="2"] {
-        transform: rotateZ(-45deg);
+        transform: rotateZ(180deg) translate3d(-10px, 0, 0);
     }
 }
+
+
 
 
