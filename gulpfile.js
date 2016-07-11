@@ -68,8 +68,8 @@ gulp.task('criticalcss', function (cb) {
         src: 'index.html',
         styleTarget: './public/css/critical.css',
         htmlTarget: 'index.html',
-        width: 960,
-        height: 600,
+        width: 600,
+        height: 400,
         minify: true
     }, cb.bind(cb));
 });
