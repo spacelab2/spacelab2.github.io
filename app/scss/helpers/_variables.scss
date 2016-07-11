@@ -1,4 +1,71 @@
-﻿$body-background: #825b56;
-$font-heading: 'Oswald', sans-serif;
-$font-body: 'Roboto', sans-serif;
-$body-background-right: #052439;
+﻿/*------------------------------------*\
+    Variables
+\*------------------------------------*/
+
+/*------------------------------------*\
+    Colours
+\*------------------------------------*/
+
+// Colours
+$dark-blue: #052439;
+$dark-pink: #825b56;
+$teal: #85b99c;
+$white: #fff;
+$black: #000;
+
+/*------------------------------------*\
+    Typography
+\*------------------------------------*/
+
+// Web fonts
+$font-oswald: 'Oswald', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+
+/*------------------------------------*\
+    Default settings
+\*------------------------------------*/
+
+$base--font: $font-roboto;
+$base--font-size: 100%;
+$base--font-size-huge: 1.2vw;
+$base--background: $dark-pink;
+$base--background-large: $dark-blue;
+
+/*------------------------------------*\
+    Modules settings
+\*------------------------------------*/
+
+// Main
+$main--right-background: $dark-pink;
+
+// Logo
+$logo--heading-font: $font-oswald;
+$logo--heading-font-size: 38;
+$logo--large: 48;
+$logo--colour: $teal;
+
+// Content
+$content--line-height: 1.6;
+$content--colour: $white;
+$content--font-size: 20;
+$content--font-size-large: 25;
+$content--padding: 20;
+$content--padding-large: 40;
+$content--about-colour: $dark-pink;
+$content--heading-size: 50;
+$content--heading-size-large: 100;
+
+// Menu
+$menu--padding: 20;
+$menu--background-colour: $white;
+$menu--size: 32;
+$menu--line-colour: $dark-blue;
+$menu--line-close-colour: $dark-blue;
+$menu--line-close-background-colour: $dark-pink;
+
+// nav
+$nav--link-margin: 40;
+$nav--font-size: 56;
+$nav--text-transform: uppercase;
+$nav--colour: $teal;
+

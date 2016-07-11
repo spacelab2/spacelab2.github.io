@@ -1,0 +1,62 @@
+﻿/*------------------------------------*\
+    JS Modifiers toggleNav
+\*------------------------------------*/
+
+.is--toggle-nav {
+
+    .main__overlay {
+        display: block;
+        transform: translateY(100%);
+        animation: 1s forwards animateSlideVertical;
+         @media (min-width: rem(2000)) { 
+             width: 100%;
+         }
+    }
+
+    .main__half {
+        display: none;
+    }
+
+    .menu--open {
+        opacity: 0;
+    }
+
+    .menu__line {
+    transition: transform 0.4s;
+    &[data-line="top"] {
+        transform: rotateZ(90deg) translate3d(0, 0, 0);
+    }
+    &[data-line="middle"] {
+        opacity: 0;
+    }
+    &[data-line="bottom"] {
+        transform: rotateZ(90deg) translate3d(0, 22px, 0);
+    }
+}
+
+    .menu--close {
+        opacity: 1;
+    }
+
+    .menu--line-close {
+        transition: transform 0.4s;
+        &[data-line="1"] {
+            transform: rotateZ(45deg);
+        }
+        &[data-line="2"] {
+            transform: rotateZ(-45deg);
+        }
+    }
+
+    .content--about {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+    }
+
+}
+
+
+

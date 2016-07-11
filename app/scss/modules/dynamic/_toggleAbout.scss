@@ -1,0 +1,23 @@
+﻿/*------------------------------------*\
+    JS Modifiers toggleAbout
+\*------------------------------------*/
+
+.is--toggle-about {
+
+    .content--about {
+        display: block;
+        transform: translatex(-100%);
+        animation: 0.8s forwards animateSlideOffset;
+        @media (min-width: rem(800))  {
+            display: flex;
+        }
+    }
+
+    .nav {
+        display: none;
+    }
+    
+}
+
+
+

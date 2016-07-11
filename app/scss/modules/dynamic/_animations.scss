@@ -1,0 +1,60 @@
+﻿@keyframes animateSlideHorizontal {
+  100%   { transform: translatex(0); width: 50vw; }
+}
+
+@keyframes animateSlideVertical {
+  100%   { transform: translatey(0); }
+}
+
+@keyframes animateHeightExpand {
+    100% {height: 50vh;}
+}
+
+@keyframes animateScale {
+    100% {transform: scale(1);}
+}
+
+@keyframes animateSlideOffset {
+    100% { transform: translateX(0); }
+}
+
+@keyframes animateOpacity {
+    100% { opacity: 1; }
+}
+
+@keyframes animateHeight {
+    100% {height: 50vh;}
+}
+
+ @media (min-width: rem(600)) {
+     @keyframes animateHeight {
+        100% {height: 60vh;}
+    }
+ }
+
+.loaded {
+    .logo__heading {
+        animation: none;
+        transform: scale(1);
+    }
+
+    .main--right {
+        transform: translateY(0);
+        opacity: 0;
+        animation: 1s 0.5s forwards animateOpacity;
+        @media (min-width: rem(600)) {
+            transform: translateX(0);
+            width: 50vw;
+        }
+    }
+ 
+    .main--left {
+        height: 0;
+        animation: 0.4s forwards animateHeight;
+        @media (min-width: rem(600)) {
+           opacity: 1;
+           height: 0;
+           animation: 0.4s forwards animateHeight;
+        }
+    }
+}
