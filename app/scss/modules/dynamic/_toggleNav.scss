@@ -7,7 +7,7 @@
     .main__overlay {
         display: block;
         transform: translateY(100%);
-        animation: 2s forwards slideVertical;
+        animation: 1s forwards animateSlideVertical;
          @media (min-width: rem(2000)) { 
              width: 100%;
          }

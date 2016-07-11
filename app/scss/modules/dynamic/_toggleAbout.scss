@@ -7,7 +7,7 @@
     .content--about {
         display: block;
         transform: translatex(-100%);
-        animation: 2s forwards slideOffset;
+        animation: 0.8s forwards animateSlideOffset;
         @media (min-width: rem(800))  {
             display: flex;
         }
