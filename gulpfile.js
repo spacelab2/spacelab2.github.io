@@ -63,6 +63,18 @@ gulp.task("minify-css", function () {
         .pipe(gulp.dest(sassDest));
 });
 
+gulp.task('criticalcss', function (cb) {
+    critical.generateInline({
+        src: 'index.html',
+        styleTarget: './public/css/critical.css',
+        htmlTarget: 'index.html',
+        width: 960,
+        height: 600,
+        minify: true
+    }, cb.bind(cb));
+});
+
+
 // 'Production' task, this will minify css and javascript for production
 gulp.task("production", ["minify-css", "minify-javascript"]);
 
