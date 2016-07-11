@@ -1,0 +1,68 @@
+﻿/*------------------------------------*\
+    Module: content
+\*------------------------------------*/
+
+/*------------------------------------*\
+    Block
+\*------------------------------------*/
+
+.content--about {
+    color: $content--about-colour;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    @media (min-width: rem(600)) { 
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/*------------------------------------*\
+    Elements
+\*------------------------------------*/
+
+.content__heading {
+    text-align: center;
+    font-size: rem($content--heading-size);
+    @media (min-width: rem(600)) {
+        font-size: rem($content--heading-size-large);
+    }
+}
+
+.content_text {
+    padding: 0 rem($content--padding);
+    font-size: rem($content--font-size);
+    line-height: $content--line-height;
+    text-align: center;
+    @media (min-width: rem(600)) { 
+        padding: 0 rem($content--padding-large);
+        text-align: justify;
+        font-size: rem($content--font-size-large);
+    }
+}
+
+/*------------------------------------*\
+    Modifiers
+\*------------------------------------*/
+
+.content--is-about {
+    width: auto;
+    @media (min-width: rem(600)) { 
+        width: 40vh;
+    }
+    @media (min-width: rem(2000)) {
+        width: 100vw;
+    }
+}
+
+.content--is-intro {
+    width: 100%;
+    display: block;
+    @media (min-width: rem(600)) {
+        width: 50vh;
+    }
+}
+
+
+

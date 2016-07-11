@@ -1,0 +1,31 @@
+﻿/*------------------------------------*\
+    Module: logo
+\*------------------------------------*/
+
+/*------------------------------------*\
+    Block
+\*------------------------------------*/
+
+.logo {
+    
+}
+
+/*------------------------------------*\
+    Elements
+\*------------------------------------*/
+
+.logo__heading {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: rem($logo--heading-font-size);
+    font-family: $logo--heading-font;
+    text-transform: uppercase;
+    color: $logo--colour;
+    transform: scale(0.5);
+    animation: 1s ease-in forwards animateScale; 
+    @media (min-width: rem(600)) {
+        font-size: rem($logo--large);
+        
+    }
+}

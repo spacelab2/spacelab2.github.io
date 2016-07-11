@@ -1,0 +1,101 @@
+﻿/*------------------------------------*\
+    Module: main
+\*------------------------------------*/
+
+/*------------------------------------*\
+    Block
+\*------------------------------------*/
+
+.main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex-direction: column;
+
+    @media (min-width: rem(600)) {
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        perspective: 800px;
+    }
+}
+
+
+/*------------------------------------*\
+    Elements
+\*------------------------------------*/
+
+.main__half {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: rem(600)) { 
+        width: 50vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: pxtorem(10);
+    }
+}
+
+.main__overlay {
+    display: none;
+    background: $dark-blue;
+}
+
+.main__wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+/*------------------------------------*\
+    Modifiers
+\*------------------------------------*/
+
+.main--left {
+    background: $dark-blue;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    animation: 2s 1s 1 forwards animateHeightExpand;
+    @media (min-width: rem(600)) {
+        height: 100%;
+        width: 50vw;
+    }
+}
+
+.main--right {
+    height: 100%;
+    width: 100%;
+    background: $main--right-background;
+    display: flex;
+    transform: translatey(100%);
+    animation: 2s 1s 1 forwards animateSlideVertical;
+    @media (min-width: rem(600)) {
+        height: 60vh;
+        overflow: hidden;
+        transform: translatex(100%);
+        width: 0;
+        height: 100%;
+        animation: 1s 1s 1 forwards animateSlideHorizontal;
+    }
+}
+
+
+
+
+
+
+
+
+
+
