@@ -63,15 +63,16 @@ gulp.task("minify-css", function () {
         .pipe(gulp.dest(sassDest));
 });
 
-gulp.task('criticalcss', function (cb) {
+gulp.task('criticalcss', function () {
     critical.generateInline({
         src: 'index.html',
         styleTarget: './public/css/critical.css',
         htmlTarget: 'index.html',
         width: 600,
         height: 400,
-        minify: true
-    }, cb.bind(cb));
+        minify: true,
+        ignore: ['@font-face']
+    });
 });
 
 
