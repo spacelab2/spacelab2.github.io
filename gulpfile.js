@@ -8,6 +8,7 @@ var uglify = require("gulp-uglify");
 var gutil = require("gulp-util");
 var sourcemaps = require("gulp-sourcemaps");
 var critical = require('critical');
+var cssmin = require('gulp-cssmin');
 
 var sassSrc = "app/scss/**/*.scss";
 var sassDest = "public/css";
@@ -60,9 +61,11 @@ gulp.task("minify-css", function () {
             browsers: ["last 2 versions"],
             cascade: false
         }))
+        .pipe(cssmin())
         .pipe(gulp.dest(sassDest));
 });
 
+// Run this task after production, this will grab styles from html and do its critical magic. 
 gulp.task('criticalcss', function () {
     critical.generateInline({
         src: 'index.html',

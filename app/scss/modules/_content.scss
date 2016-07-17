@@ -25,8 +25,10 @@
 .content__heading {
     text-align: center;
     font-size: rem($content--heading-size);
+    padding: 0 rem($content--padding);
     @media (min-width: rem(600)) {
         font-size: rem($content--heading-size-large);
+        padding: 0 rem($content--padding-large);
     }
 }
 
@@ -37,7 +39,6 @@
     text-align: center;
     @media (min-width: rem(600)) { 
         padding: 0 rem($content--padding-large);
-        text-align: justify;
         font-size: rem($content--font-size-large);
     }
 }
@@ -48,8 +49,9 @@
 
 .content--is-about {
     width: auto;
+    text-align: left;
     @media (min-width: rem(600)) { 
-        width: 40vh;
+        width: 40vw;
     }
     @media (min-width: rem(2000)) {
         width: 100vw;
@@ -59,9 +61,34 @@
 .content--is-intro {
     width: 100%;
     display: block;
+      
     @media (min-width: rem(600)) {
-        width: 50vh;
+        width: 50vw;
     }
+}
+
+.content--line-one,
+.content--line-two,
+.content--line-three {
+    font-size: rem(30);
+    opacity: 0;
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    @media (min-width: rem(600)) {
+        font-size: rem(50);
+    }
+}
+
+.content--line-one {
+    animation: 1s 2s forwards animateOpacity; 
+}
+
+.content--line-two {
+    animation: 1s 3s forwards animateOpacity; 
+}
+
+.content--line-three {
+    animation: 1s 4s forwards animateOpacity; 
 }
 
 
