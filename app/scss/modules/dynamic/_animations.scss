@@ -57,4 +57,11 @@
            animation: 0.4s forwards animateHeight;
         }
     }
+
+    .content--line-one,
+    .content--line-two,
+    .content--line-three {
+        animation: none;
+        opacity: 1;
+    }
 }

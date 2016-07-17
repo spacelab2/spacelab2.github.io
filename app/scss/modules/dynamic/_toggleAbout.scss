@@ -8,7 +8,7 @@
         display: block;
         transform: translatex(-100%);
         animation: 0.8s forwards animateSlideOffset;
-        @media (min-width: rem(800))  {
+        @media (min-width: rem(600))  {
             display: flex;
         }
     }
